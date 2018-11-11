@@ -5,19 +5,26 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class FormsPage extends Component {
   render() {
     return (
-      <Container>
-        <h1>Please select the form </h1>
-        
-        <Link to="/forms">
-          <Button> I know what forms to fill</Button>
-        </Link>
-        <Link to="/tree">
-          <Button> Help me find what forms to fill </Button>
-        </Link>
-        <Link to="/create">
-        <Button> Create a new form. Trust me, I'm a lawyer. </Button>
-        </Link>
-      </Container>
+      <div>
+        <h1>   Please describe your issues</h1>
+        <ul>
+          <li>
+            <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+              Domestic violence
+            </Link>
+          </li>
+          <li>
+            <Link to={{ pathname: "/form", search: "?name=tax" }}>
+              Federal Tax
+            </Link>
+          </li>
+          <li>
+            <Link to={{ pathname: "/form", search: "?name=veteran" }}>
+              Veteran rights
+            </Link>
+          </li>
+        </ul>
+      </div>
   );
   }
 }
