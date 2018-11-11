@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Container, Button } from "./styles";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class FormsPage extends Component {
   render() {
