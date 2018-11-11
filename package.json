@@ -7,6 +7,7 @@
     "grid-styled": "^5.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-form": "^3.5.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "styled-grid": "^1.0.0-beta.1"

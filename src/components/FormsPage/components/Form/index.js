@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Div, Button, formRadio } from "./styles";
 import questions from "./questions";
 
 class Form extends Component {
@@ -12,13 +13,15 @@ class Form extends Component {
     const form_items = questions[val].questions.map(question => {
       if (question.type === "bool") {
         return (
-          <div>
+          <Div flexDirection="column">
             <p>{question.text}</p>
-            <input type="radio" name={question.key} value={true} /> Yes <br />
-            <input type="radio" name={question.key} value={false} /> No <br />
-          </div>
+            <Div flexDirection="row">
+            <input type="radio" class="formRadio" name={question.key} value={true} /> Yes <br />
+            <input type="radio" class="formRadio" name={question.key} value={false} /> No <br />
+            </Div>
+          </Div>
         );
-      } else {
+      } else if (question.type === "text") {
         return <h2>in progress </h2>;
       }
     });
@@ -26,11 +29,11 @@ class Form extends Component {
     const verify = questions[val].submit;
 
     return (
-      <div>
+      <Div flexDirection="column" >
         <h1>{`This the ${questions[val].name} form!`}</h1>
         {form_items}
-        <button onClick={verify}> Submit </button>
-      </div>
+        <Button onClick={verify}> Submit </Button>
+      </Div>
     );
   }
 }
