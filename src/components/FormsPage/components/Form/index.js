@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Div, Button, Fadio } from "./styles";
 import questions from "./questions";
 
 class Form extends Component {
@@ -27,47 +28,55 @@ class Form extends Component {
     const form_items = questions[val].questions.map(question => {
       if (question.type === "bool") {
         return show[question.key] ? (
-          <div key={question.key}>
+          <Div flexDirection="column" key={question.key}>
             <p>{question.text}</p>
-            <input
-              type="radio"
-              name={question.key}
-              value={true}
-              onClick={() =>
-                this.setState({
-                  index: this.state.index + 1
-                })
-              }
-            />{" "}
-            Yes <br />
-            <input
-              type="radio"
-              name={question.key}
-              value={false}
-              onClick={() =>
-                this.setState({
-                  index: this.state.index + 1
-                })
-              }
-            />{" "}
-            No <br />
-          </div>
+            <Div flexDirection="row">
+              <Fadio
+                type="radio"
+                name={question.key}
+                value={true}
+                onClick={() =>
+                  this.setState({
+                    index: this.state.index + 1
+                  })
+                }
+              />{" "}
+              Yes <br />
+              <Fadio
+                type="radio"
+                name={question.key}
+                value={false}
+                onClick={() =>
+                  this.setState({
+                    index: this.state.index + 1
+                  })
+                }
+              />{" "}
+              No <br />
+            </Div>
+          </Div>
         ) : (
-          <div key={question.key} />
+          <Div key={question.key} />
         );
-      } else {
+      } else if (question.type === "text") {
         return <h2>in progress </h2>;
+      } else {
+        return (
+          <Div>
+            <h2>in progress</h2>
+          </Div>
+        );
       }
     });
 
     const verify = questions[val].submit;
 
     return (
-      <div>
+      <Div flexDirection="column">
         <h1>{`This the ${questions[val].name} form!`}</h1>
         {form_items}
-        <button onClick={verify}> Submit </button>
-      </div>
+        <Button onClick={verify}> Submit </Button>
+      </Div>
     );
   }
 }
