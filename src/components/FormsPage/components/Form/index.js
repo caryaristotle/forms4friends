@@ -6,7 +6,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      index: 1
+      show: {}
     };
   }
 
@@ -15,17 +15,11 @@ class Form extends Component {
 
     const val = params.get("name");
 
-    const show = {};
+    const show = this.state.show;
 
-    for (
-      var i = 0;
-      i < this.state.index && i < questions[val].questions.length;
-      i++
-    ) {
-      show[questions[val].questions[i].key] = true;
-    }
+    show[questions[val].questions[0].key] = true;
 
-    const form_items = questions[val].questions.map(question => {
+    const form_items = questions[val].questions.map((question, i) => {
       if (question.type === "bool") {
         return show[question.key] ? (
           <Div flexDirection="column" key={question.key}>
@@ -37,7 +31,12 @@ class Form extends Component {
                 value={true}
                 onClick={() =>
                   this.setState({
-                    index: this.state.index + 1
+                    show: {
+                      ...this.state.show,
+                      [questions[val].questions[
+                        Math.min(i + 1, questions[val].questions.length - 1)
+                      ].key]: true
+                    }
                   })
                 }
               />{" "}
@@ -48,7 +47,12 @@ class Form extends Component {
                 value={false}
                 onClick={() =>
                   this.setState({
-                    index: this.state.index + 1
+                    show: {
+                      ...this.state.show,
+                      [questions[val].questions[
+                        Math.min(i + 1, questions[val].questions.length - 1)
+                      ].key]: true
+                    }
                   })
                 }
               />{" "}
