@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class FormsPage extends Component {
   render() {
-    return <h1>Forms Page!</h1>;
+    return <h1>Tree Page!</h1>;
   }
 }
 
