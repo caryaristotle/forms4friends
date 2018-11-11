@@ -1,48 +1,61 @@
 import React, { Component } from "react";
-import { Container, Button } from "./styles";
+import { Container, Button, Div } from "./styles";
 import { Link } from "react-router-dom";
 
 class FormsPage extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      <div>
+      <Div>
         <h1>   Please describe your issues</h1>
         <ul>
           <li>
-            <Link to={{ pathname: "/form", search: "?name=domestic" }}>
-              Domestic violence
-            </Link>
+            <p>I'm a victim of domestic violence.</p>
+            <ul>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to prevent my abuser from being within my physical space.</p>
+                </Link>
+              </li>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to protect my kids.</p>
+                </Link>
+              </li>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to protect my pets.</p>
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
-            <Link to={{ pathname: "/form", search: "?name=tax" }}>
-              Federal Tax
-            </Link>
+            <p>I'd like help filing federal taxes.</p>
+            <ul>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to remove canceled debt from gross income. </p>
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
-            <Link to={{ pathname: "/form", search: "?name=veteran" }}>
-              Veteran rights
-            </Link>
+          <p>I'm a veteran.</p>
+            <ul>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to file for a discharge upgrade.</p>
+                </Link>
+              </li>
+              <li>
+                <Link to={{ pathname: "/form", search: "?name=domestic" }}>
+                  <p>I'd like to appeal a vets benefits denial.</p>
+                </Link>
+              </li>
+            </ul>
           </li>
         </ul>
-      </div>
+      </Div>
   );
-=======
-      <Container>
-        <h1>Please select the form </h1>
-
-        <Link to="/forms">
-          <Button> I know what forms to fill</Button>
-        </Link>
-        <Link to="/tree">
-          <Button> Help me find what forms to fill </Button>
-        </Link>
-        <Link to="/create">
-          <Button> Create a new form. Trust me, I'm a lawyer. </Button>
-        </Link>
-      </Container>
-    );
->>>>>>> 2e859143c616c44fcb75255dea48e41be517f5a2
   }
 }
 
