@@ -1,17 +1,18 @@
 import React, { Component } from "react";
+import { Div } from "./styles";
 import { Link } from "react-router-dom";
 
 class FormsPage extends Component {
   render() {
     return (
-      <div>
-        <h1>Forms Page!</h1>
+      <Div>
+        <h1>Select your form</h1>
         <ul>
           <li>
-            Domestic Violence
+            <p>Domestic Violence</p>
             <ul>
               <li>
-                Protective Order
+                <p>Protective Order</p>
                 <ul>
                   <li>
                     <Link
@@ -20,7 +21,7 @@ class FormsPage extends Component {
                         search: "?name=domestic.protective.eligibility"
                       }}
                     >
-                      Eligibility
+                      <p>Eligibility</p>
                     </Link>
                   </li>
                   <li>
@@ -30,7 +31,7 @@ class FormsPage extends Component {
                         search: "?name=domestic.protective.plaintiffinfo"
                       }}
                     >
-                      Plaintiff Confidential Information Form
+                      <p>Plaintiff Confidential Information Form</p>
                     </Link>
                   </li>
                   <li>
@@ -40,7 +41,7 @@ class FormsPage extends Component {
                         search: "?name=domestic.protective.defendantinfo"
                       }}
                     >
-                      Defendant Confidential Information Form
+                      <p>Defendant Confidential Information Form</p>
                     </Link>
                   </li>
                   <li>
@@ -50,7 +51,7 @@ class FormsPage extends Component {
                         search: "?name=domestic.protective.209a"
                       }}
                     >
-                      209A
+                      <p>209A</p>
                     </Link>
                   </li>
                   <li>
@@ -60,7 +61,7 @@ class FormsPage extends Component {
                         search: "?name=domestic.protective.affadavit"
                       }}
                     >
-                      Affadavit
+                      <p>Affadavit</p>
                     </Link>
                   </li>
                 </ul>
@@ -69,16 +70,16 @@ class FormsPage extends Component {
           </li>
           <li>
             <Link to={{ pathname: "/form", search: "?name=tax" }}>
-              Federal Tax
+              <p>Federal Tax</p>
             </Link>
           </li>
           <li>
             <Link to={{ pathname: "/form", search: "?name=veteran" }}>
-              Veteran rights
+              <p>Veteran rights</p>
             </Link>
           </li>
         </ul>
-      </div>
+      </Div>
     );
   }
 }

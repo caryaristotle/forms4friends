@@ -5,10 +5,10 @@ export const Button = styled.button`
     width: 80%;
     display: inline-block;
     border-radius: 4px;
-    background-color: #f4511e;
+    background-color: blue;
     border: none;
     color: #FFFFFF;
-    text-align: center;
+    text-align: left;
     font-size: 28px;
     padding: 20px;
     transition: all 0.5s;
@@ -60,11 +60,12 @@ export const InputText = styled.input`
 
 export const Container = styled(Flex)`
   width: 100%;
-  margin: 10px;
+  margin: 15px;
 `;
 
-export const Div = styled(Flex)``;
-
+export const Div = styled(Flex)`
+  margin: 10%;
+`;
 export const Text = styled(Flex)`
   font: Arial;
   font-size: 18px;

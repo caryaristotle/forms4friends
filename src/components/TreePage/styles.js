@@ -63,7 +63,9 @@ export const Container = styled(Flex)`
   margin: 10px;
 `;
 
-export const Div = styled(Flex)``;
+export const Div = styled(Flex)`
+  margin: 10%;
+`;
 
 export const Text = styled(Flex)`
   font: Arial;
