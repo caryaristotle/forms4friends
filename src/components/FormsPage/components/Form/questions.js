@@ -25,10 +25,10 @@ const questions = {
       return;
     }
   },
-  "domestic.protective.plaintiffinfo": [],
-  "domestic.protective.defendantinfo": [],
-  "domestic.protective.209a": [],
-  "domestic.protective.affadavit": []
+  "domestic.protective.plaintiffinfo": {},
+  "domestic.protective.defendantinfo": {},
+  "domestic.protective.209a": {},
+  "domestic.protective.affadavit": {}
 };
 
 export default questions;
