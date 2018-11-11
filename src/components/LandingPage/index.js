@@ -7,13 +7,13 @@ class LandingPage extends Component {
     return (
       <Container>
         <Link to="/forms">
-          <Button />
+          <Button>I know what forms to fill</Button>
         </Link>
         <Link to="/tree">
-          <Button />
+          <Button>Help me find which forms to fill</Button>
         </Link>
         <Link to="/create">
-          <Button />
+          <Button>Create a new form. Trust me, I'm a lawyer.</Button>
         </Link>
       </Container>
     );
