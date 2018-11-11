@@ -1,5 +1,5 @@
-import { Flex } from 'grid-styled'
-import styled from 'styled-components'
+import { Flex } from "grid-styled";
+import styled from "styled-components";
 
 export const Button = styled.button`
     width: 60px;
@@ -19,18 +19,18 @@ export const Button = styled.button`
 `;
 
 export const InputText = styled.input`
-    width: 100%;
-    padding: 5px 5px;
-    margin: 6px 6px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    border-radius: 6px;
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+  width: 100%;
+  padding: 5px 5px;
+  margin: 6px 6px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 6px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 
-    :focus {
-        border: 3px solid red;
-    }
+  :focus {
+    border: 3px solid red;
+  }
 `;
 
 export const Container = styled(Flex)`
@@ -38,11 +38,10 @@ export const Container = styled(Flex)`
   margin: 10px;
 `;
 
-export const Div = styled(Flex)`
-`;
+export const Div = styled(Flex)``;
 
 export const Text = styled(Flex)`
-  font: Arial
+  font: Arial;
   font-size: 18px;
   font-weight: 300;
 `;
