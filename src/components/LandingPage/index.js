@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-
+import Button from './Components/button/initialform';
 class LandingPage extends Component {
   render () {
-    return (<h1>Hi! This is Forms4Friends!</h1>)
+    return <Button/>
   }
 }
 
