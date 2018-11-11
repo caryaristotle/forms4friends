@@ -2,19 +2,44 @@ import { Flex } from "grid-styled";
 import styled from "styled-components";
 
 export const Button = styled.button`
-    width: 60px;
-    border-radius: 6px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    width: 80%;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    padding: 5px 5px;
-    margin: 6px 6px;
+  
+    span{
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
 
-    :hover {
-        background-color: black
-        color: white;
+    span:after{
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    :hover span{
+      padding-right: 25px;
+    }
+
+    :hover span:after{
+      opacity: 1;
+      right: 0;
     }
 `;
 
