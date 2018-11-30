@@ -16,31 +16,32 @@ export const Button = styled.button`
     margin: 5px;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
-  
-    span{
-      cursor: pointer;
-      display: inline-block;
-      position: relative;
-      transition: 0.5s;
-    }
 
-    span:after{
-      content: '\00bb';
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: -20px;
-      transition: 0.5s;
-    }
-
-    :hover span{
+    &:hover ${Span}{
       padding-right: 25px;
+      color: red;
     }
 
-    :hover span:after{
+    &:hover ${Span}:after{
       opacity: 1;
       right: 0;
     }
+`;
+
+export const Span = styled.span`
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+  :after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
 `;
 
 export const InputText = styled.input`

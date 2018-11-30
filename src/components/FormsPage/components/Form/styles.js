@@ -17,22 +17,6 @@ export const Button = styled.button`
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 
-  span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
   :hover span {
     padding-right: 25px;
   }
@@ -40,6 +24,22 @@ export const Button = styled.button`
   :hover span:after {
     opacity: 1;
     right: 0;
+  }
+`;
+
+export const Span = styled.span`
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+  :after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
   }
 `;
 

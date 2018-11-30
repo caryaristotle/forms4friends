@@ -1,6 +1,6 @@
+import questions from "./questions";
 import React, { Component } from "react";
 import { Div, Button, Fadio } from "./styles";
-import questions from "./questions";
 
 class Form extends Component {
   constructor(props) {
@@ -13,12 +13,16 @@ class Form extends Component {
   render() {
     const params = new URLSearchParams(document.location.search);
 
-    const val = params.get("name");
+    const val = params.get('name');
 
     const show = this.state.show;
 
     show[questions[val].questions[0].key] = true;
+    
+    // if (Object.values(questions) == val){
+    //   show questions.questions[0]
 
+    // }
     const form_items = questions[val].questions.map((question, i) => {
       if (question.type === "bool") {
         return show[question.key] ? (

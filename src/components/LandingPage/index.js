@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Button, Div } from "./styles";
+import { Container, Button, Div, Span } from "./styles";
 import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
@@ -10,7 +10,7 @@ class LandingPage extends Component {
           <ul>
             <h1>Welcome to Legal Form Search!</h1>
             <Link to="/forms">
-              <Button> I know what forms to fill</Button>
+              <Button> <Span/> I know what forms to fill</Button>
             </Link>
             <Link to="/tree">
               <Button> Help me find what forms to fill </Button>
